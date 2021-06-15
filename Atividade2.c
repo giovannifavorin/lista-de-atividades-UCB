@@ -3,7 +3,7 @@
 
 int main(){
 
-	int Maior;
+    int Maior;
     int Num1;
     int Num2;
     int Num3;
