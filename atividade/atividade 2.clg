@@ -1,0 +1,20 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	calcular a area do circulo 
+//  Entrada :	raio
+//  Saída   :	area
+
+
+principal
+	// Declarações
+	real raio;
+	real areaDoCirculo;
+
+	// Instruções
+	escreval("Qual o raio do circulo?");
+	leia(raio);
+
+	areaDoCirculo = 3.14 * (raio * raio);
+	escreva("A area do circulo e: ", areaDoCirculo, " U.M" );
+	
+fimPrincipal

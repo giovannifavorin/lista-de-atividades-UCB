@@ -1,0 +1,23 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	calcular os minutos e os segundos dentro das horas estipuladas
+//  Entrada :	horas
+//  Saída   :	minutos e segundos
+
+
+principal
+	// Declarações
+	inteiro horas;
+	inteiro minutos;
+	inteiro segundos;
+
+	// Instruções
+	escreval("Quantas horas deseja?");
+	leia(horas);
+
+	minutos = horas * 60;
+	segundos = horas * 3600;
+
+	escreval("Em ", horas, " há ", minutos, " minutos, ou seja,", segundos, " segundos");
+
+fimPrincipal

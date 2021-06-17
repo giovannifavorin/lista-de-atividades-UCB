@@ -1,0 +1,38 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:  calcular o salario e guardar os dados
+//  Entrada :dados
+//  Saída   :salario
+
+
+principal
+	// Declarações
+	texto nome;
+	real salario;
+	inteiro tempo;
+	caracter sexo;
+	texto matricula;
+	real salarioDiario;
+
+	// Instruções	
+	escreval("qual o seu sexo");
+	leiaCaracter(sexo);
+	escreval("qual o seu nome ");
+	leia(nome);
+	escreval("qual o valor do seu tempo de trabalho ");
+	leia(salario);
+	escreval("qual a sua matricula");
+	leia(matricula);
+	escreval("qual o seu tempo de trabalho");
+	leia(tempo);
+
+	salarioDiario = tempo * salario;
+	escreval("Salario total: ", salarioDiario,"R$ ");
+	escreval("Seu sexo e: ", sexo);
+	escreval("Seu nome e: ",nome);
+	escreval("Sua matricula e: ",matricula);
+	escreval("Seu tempo de trabalho e: ", tempo);
+	escreval("Seu salario por hora e: ",salario);
+	
+
+fimPrincipal

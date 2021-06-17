@@ -1,0 +1,28 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	dividir dois valores, e obter o quociente e o resto da divisao
+//  Entrada :	valores
+//  Saída   :	valor da divisao
+
+
+principal
+	// Declarações
+	inteiro divisor;
+	inteiro dividendo;
+	real resultado;
+	real resto;
+
+	// Instruções
+	escreval("Qual o valor do divisor");
+	leia(divisor);
+	escreval("qual o valor do dividendo");
+	leia(dividendo);
+
+	resultado = dividendo / divisor;
+	escreval("O quociente e: ", resultado);
+
+	resto = dividendo % divisor;
+	escreval("O resto e: ", resto);
+	
+
+fimPrincipal
