@@ -1,0 +1,19 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	transformar qualquer valor em seu devido módulo
+//  Entrada :	valor qualquer	
+//  Saída   :	módulo do valor
+
+
+principal
+	// Declarações
+	real valor;
+
+	// Instruções
+	escreval("Qual o valor desejado?");
+	leia(valor);
+
+	escreval("O valor absoluto é: ", abs(valor));
+	escreval("O cálculo para chegar a essa conclusão é: ", valor,"*-1, caso seja um valor negativo, caso seja positivo, o valor permanece o mesmo");
+
+fimPrincipal

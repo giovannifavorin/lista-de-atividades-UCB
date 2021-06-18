@@ -1,0 +1,37 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:  calcular a metragem necessaria e retornar o valor de resto
+//  Entrada :  quantidade de rolos e metros a serem cobridos
+//  Saída   :  quantidade de rolos usados e metros sobrados
+
+
+principal
+	// Declarações
+	inteiro rolos;
+	inteiro metros;
+	inteiro metroSobrados;
+	inteiro metrosNecessarios;
+	inteiro metroRolos;
+	
+	// Instruções
+	escreval("quantos rolos voce tem?");
+	leia(rolos);
+	escreval("quantos metros voce usara?");
+	leia(metros);
+	
+	metroRolos = rolos * 50;
+
+	se (metros > metroRolos) entao 
+		metrosNecessarios = metroRolos - metros;
+		escreval("Voce precisa de mais rolos para cobrir os metros");
+		escreval("Voce precisa de mais ", (abs(metrosNecessarios) / 50), " rolos ", "para dar o total de ", abs(metrosNecessarios), " metros"); 
+	senao 
+		metroSobrados = metroRolos - metros; 
+		escreval("Sobrou :", metroSobrados, " metros");
+		escreval("Sobrou :", (metroSobrados / 50), " rolos");
+	fimSe
+		
+	
+	
+
+fimPrincipal

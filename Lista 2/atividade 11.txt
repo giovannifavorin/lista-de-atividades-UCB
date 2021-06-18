@@ -1,0 +1,11 @@
+Avaliar o número de DDD e checar se ele se encaixa em uma dessas situções
+61 - Brasília
+71 - Salvador
+11 - São Paulo
+21 - Rio de Janeiro
+32 - Juiz de Fora
+19 - Campinas
+27 - Vitória
+31 - Belo Horizonte
+qualquer outro - uma cidade no Brasil sem identificação
+feito isso, retornar a informação da cidade de origem do DDD

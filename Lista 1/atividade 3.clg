@@ -1,0 +1,28 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	calcular a media aritmetica de todos os numeros fornecidos
+//  Entrada :	quantidade de numeros, e quais numeros
+//  Saída   :	media aritmetica de todos os numeros
+
+
+principal
+	// Declarações
+	real numero1;
+	real numero2;
+	real numero3;
+	real media;
+
+	// Instruções
+	escreval("Qual sera o primeiro numero?");
+	leia(numero1);
+	escreval("Qual sera o segundo numero?");
+	leia(numero2);
+	escreval("Qual sera o terceiro numero?");
+	leia(numero3);
+
+	media = (numero1 * numero2 * numero3) / 3;
+	
+	escreval("Os numeros foram: ", numero1, " , ", numero2, " , ", numero3, " , ");
+	escreval("E a media aritmetica e: ", media);
+
+fimPrincipal

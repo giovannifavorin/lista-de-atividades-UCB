@@ -1,0 +1,31 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:    Ler a velocidade de um carro, e definir se tal será multado ou não
+//  Entrada :    Valor da velocidade do carro    
+//  Saída   :    Definição se foi multado ou não
+
+
+principal
+    // Declarações
+    inteiro velocidadeCarro;
+    texto placaCarro;
+    inteiro velocidadeExtra;
+
+    // Instruções
+    escreval("Qual a placa do carro?");
+    leia(placaCarro);
+    escreval("Qual a velocidade do carro?");
+    leia(velocidadeCarro);
+
+    velocidadeExtra= velocidadeCarro - 80;
+
+    se (velocidadeCarro > 80) entao 
+        escreval("O carro com a placa: ", placaCarro, " será multado por exceder a velocidade limite da rodovia em: ", velocidadeExtra ,"Km/h" );
+    senao 
+        se (velocidadeCarro < 80) entao
+            escreval("Parabéns, você não ultrapassou a velocidade limite da rodovia, digno de um parabéns");
+        senao
+            escreval("Você gosta de viver na beira do perigo ein? Muito bem, dessa vez você não foi multado... não dessa vez");
+        fimSe
+    fimSe 
+fimPrincipal

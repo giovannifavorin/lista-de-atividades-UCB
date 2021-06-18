@@ -1,0 +1,29 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	calcular o débotp em base do tempo usado
+//  Entrada :	o tempo usado de internet
+//  Saída   :	o débito
+
+
+principal
+	// Declarações
+	inteiro horas, debitoExtra, horasExtras, debito;
+
+	// Instruções
+	escreval("Quantas horas de uso?");
+	leia(horas);
+	se(horas > 20) entao
+	horasExtras = horas - 20;
+	debitoExtra = horasExtras * 3;
+	debito = 30 + debitoExtra;
+	escreval ("Sua dívida é: ", debito, " por exceder ", horasExtras, " horas, adicionando um total de ", debitoExtra, " reais ao valor original");
+	senao
+		se(horas == 20) entao 
+		escreval("Sua dívida é: 30 reais");
+		senao
+		escreval("O tempo de uso não foi o suficiente para configurar uma dívida");
+		fimSe
+	fimSe
+	
+
+fimPrincipal

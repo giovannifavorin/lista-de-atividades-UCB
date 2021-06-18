@@ -1,0 +1,35 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	comparar 3 valores e determinar o maior
+//  Entrada :	3 valores
+//  Saída   :	o maior resultado
+
+
+principal
+	// Declarações
+	inteiro valor1, valor2, valor3;
+	
+
+	// Instruções
+	escreval("Qual o primeiro valor?");
+	leia(valor1);
+	escreval("Qual o segundo valor?");
+	leia(valor2);
+	escreval("Qual o terceiro valor?");
+	leia(valor3);
+
+	se ((valor1 > valor2) e (valor1 > valor3)) entao
+	escreval("O maior valor é o primeiro: ", valor1);
+	senao 
+		se ((valor2 > valor1) e (valor2 > valor3)) entao
+			escreval("O maior valor é o segundo: ", valor2);
+			senao
+				se ((valor3 > valor1) e (valor3 > valor2)) entao
+				escreval("O maior valor é o terceiro: ", valor3); 
+				senao
+				escreval("Todos os valores são iguais");
+				fimSe
+		fimSe
+	fimSe
+
+fimPrincipal

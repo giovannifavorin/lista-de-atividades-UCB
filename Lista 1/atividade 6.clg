@@ -1,0 +1,66 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:  receba e calcule o valor da nota dos alunos
+//  Entrada :valor das notas A e B
+//  Saída   :nota final A e B
+
+
+principal
+	// Declarações
+	real notaA;
+	real notaB;
+
+	
+	// Instruções
+	escreval("qual a nota A");
+	leia(notaA);
+	escreval("qual a nota B");
+	leia(notaB);
+
+	// validacao da nota (nota < 0) (nota > 10)
+
+	se (notaA < 0) entao
+		escreval("Nota A errada ou menor que 0");
+	senao 
+		se (notaA > 10) entao
+			escreval("Nota A errada ou maior que 10");
+		senao 
+			se (notaB < 0) entao 
+				escreval("Nota B errada ou menor que 0");
+			senao 
+				se (notaB > 10) entao 
+					escreval("Nota B errada ou maior que 10");
+				senao 
+					// processamento
+					processamento(notaA, notaB);
+				fimSe
+			fimSe
+		fimSe
+	fimSe
+fimPrincipal
+
+procedimento processamento(real notaA, real notaB)
+	// Declarações
+	real notaTotal;
+	real media;
+
+	//incrucao
+
+	notaTotal = notaA + notaB;
+
+	media = notaTotal / 2;
+	
+
+	escreval("Sua nota A e: ",notaA );
+	escreval("Sua nota B e: ",notaB);
+	escreval("A nota total: ",notaTotal);
+	escreval("A media: ",media);
+
+
+fimProcedimento
+
+
+
+
+
+

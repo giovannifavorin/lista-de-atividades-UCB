@@ -1,0 +1,39 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	determinar o tempo de vida vivida por uma pessoa
+//  Entrada :	data de nascimento e data atual
+//  Saída   :	tempo total vivido
+
+
+principal
+	// Declarações
+	inteiro dia, mes, ano, diaN, mesN, anoN, diaD, mesD, anoD;
+	texto nome;
+
+	// Instruções
+	escreval("Qual o seu nome?");
+	leia(nome);
+	escreval("Qual o seu dia de nascimento?");
+	leia(diaN);
+	escreval("Qual o dia atual?");
+	leia(dia);
+	escreval("Qual o seu mês de nascimento?");
+	leia(mesN);
+	escreval("Qual o mês atual?");
+	leia(mes);
+	escreval("Qual o seu ano de nascimento?");
+	leia(anoN);
+	escreval("Qual o ano atual?");
+	leia(ano);
+
+	diaD = dia - diaN;
+	mesD = mes - mesN;
+	anoD = ano- anoN;
+
+	escreval("Você nasceu no dia ", diaN, " do mês ", mesN, " do ano ", anoN);
+	escreval(" ");
+	escreval("Hoje estamos no dia ", dia, " do mês ", mes, " do ano ", ano);
+	escreval(" ");
+	escreval("Portanto, hoje você tem ", abs(diaD), " dias, ", abs(mesD), " meses e ", abs(anoD)," anos de vida, parabéns, lhe desejo muito mais anos de felicidade e alegrias ", nome);
+	escreval(" ");
+fimPrincipal

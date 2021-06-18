@@ -1,0 +1,42 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	verificar se três valores podem constituir um triângulo
+//  Entrada :	três valores
+//  Saída   :	verificação se é um triângulo
+
+
+principal
+	// Declarações
+	inteiro valor1;
+	inteiro valor2;
+	inteiro valor3;
+	inteiro triangulo;
+
+	// Instruções
+	escreval("Qual o primeiro valor?");
+	leia(valor1);
+	escreval("Qual o segundo valor?");
+	leia(valor2);
+	escreval("Qual o terceiro valor?");
+	leia(valor3);
+	
+    se ( ( valor1 < (valor2 + valor3) ) e ( valor2 < (valor1 + valor3) ) e (valor3 < (valor1 + valor2)) ) entao
+        escreval("E um triangulo");
+    senao 
+        escreval("Nao e um triangulo");
+    fimSe
+
+	se ((valor1 == valor2) e (valor1 == valor3) e (valor2 == valor3)) entao
+    escreval ("Triângulo equilátero");
+    fimSe
+
+    se (((valor1 == valor2) e (valor1 != valor3)) ou ((valor1 == valor3) e (valor1 != valor2)) ou ((valor2 == valor3) e (valor2 != valor1))) entao
+    escreval ("Triângulo isósceles");
+    fimSe
+
+    se ((valor1 != valor2) e (valor1 != valor3) e (valor2 != valor3)) entao
+    escreval ("Triângulo escaleno");
+    fimSe
+ 
+fimPrincipal
+ 

@@ -1,0 +1,28 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	determinar se é par ou impar
+//  Entrada :	um valor
+//  Saída   :	se é par ou impar
+
+
+principal
+	// Declarações
+	inteiro valor1;
+	inteiro valor2;
+	inteiro resultado;
+
+	// Instruções
+	escreval("Qual o valor?");
+	leia(valor1);
+
+	valor2 = 2;
+
+	resultado = valor1 % valor2;
+	se (resultado != 0) entao
+	escreval("O resto é: ", resultado, ". Portanto, é um ímpar ");
+	senao
+	escreval("O resto e: ", resultado, ". Portanto, é um par ");
+	fimSe
+	
+	
+fimPrincipal

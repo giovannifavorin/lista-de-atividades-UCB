@@ -1,0 +1,41 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	comparar 3 pessoas e determinar a maior
+//  Entrada :	3 pessoas
+//  Saída   :	o maior
+
+
+principal
+	// Declarações
+	inteiro pessoa1, pessoa2, pessoa3;
+	texto nome1, nome2, nome3;
+
+	// Instruções
+	escreval("Qual o nome da primeira pessoa?");
+	leia(nome1);
+	escreval("Qual o nome da segunda pessoa?");
+	leia(nome2);
+	escreval("Qual o nome da terceira pessoa?");
+	leia(nome3);
+	escreval("Qual o tamanho da primeira pessoa em Cm?");
+	leia(pessoa1);
+	escreval("Qual o tamanho da segunda pessoa em Cm?");
+	leia(pessoa2);
+	escreval("Qual o tamanho da terceira pessoa em Cm?");
+	leia(pessoa3);
+
+	se ((pessoa1 > pessoa2) e (pessoa1 > pessoa3)) entao
+	escreval("A maior pessoa é a primeira: ", pessoa1, "Cm, Que se chama ", nome1);
+	senao 
+		se ((pessoa2 > pessoa1) e (pessoa2 > pessoa3)) entao
+			escreval("A maior pessoa é a segunda: ", pessoa2, "Cm, Que se chama ", nome2);
+			senao
+				se ((pessoa3 > pessoa1) e (pessoa3 > pessoa2)) entao
+				escreval("A maior pessoa é a terceira: ", pessoa3, "Cm, Que se chama ", nome3); 
+				senao
+				escreval("Todas as pessoas são iguais em tamanho");
+				fimSe
+		fimSe
+	fimSe
+
+fimPrincipal

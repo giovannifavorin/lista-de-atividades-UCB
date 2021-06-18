@@ -1,0 +1,40 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	receber os valores e usar o pronome de tratamento correto
+//  Entrada :	nome e sexo
+//  Saída   :	forma adequada de se referir
+
+
+principal
+	// Declarações	
+	texto sexo;	
+	texto nome, sobreNome;
+	real peso;
+	real altura;
+
+	// Instruções
+	escreval("Qual o seu sexo? M ou F?");
+	leia(sexo);
+	escreval("Qual o seu nome?");
+	leia(nome);
+	escreval("Qual o seu sobreNome?");
+    leia(sobreNome);
+	escreval("Qual a sua altura");
+	leia(altura);
+
+	
+
+    se (comparaTexto(sexo, "M") == 0) entao 
+     peso = (72.5 * altura) - 58;
+    escreval("Ilmo. Sr. ", nome, sobreNome," e pesa ", peso,"Kg");
+    senao 
+    	 se (comparaTexto(sexo, "F") == 0) entao
+    	peso = (62.1 * altura) - 44.7;
+    	escreval("Ilma. Sra", nome, sobreNome," e pesa ", peso, "Kg");
+    	senao
+    	escreval("Coloque um sexo válido");
+    	fimSe
+    fimSe
+    
+
+fimPrincipal

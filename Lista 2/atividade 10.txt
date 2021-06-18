@@ -1,0 +1,1 @@
+Após avaliar os tres valores, será feita a checagem de comparação, em busca de encontrar o menor dentre os três

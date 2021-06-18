@@ -1,0 +1,27 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:	ler, comparar e determinar o maior entre 3 numeros
+//  Entrada :	3 numeros
+//  Saída   :	 o maior numero
+
+
+principal
+	// Declarações
+	inteiro valor1, valor2;
+	
+
+	// Instruções
+	escreval("Determine o valor 1: ");
+	leia (valor1);
+	escreval ("determine o valor 2: ");
+	leia(valor2);
+
+	se (valor1 > valor2) entao
+	 escreval("o maior número é: ", valor1, " e a diferença é: ", (valor1-valor2));
+	 fimSe
+	 
+	se (valor2 > valor1) entao 
+	  escreval("o maior número é: ", valor2, " e a diferença é: ", (valor2-valor1));
+	 fimSe
+
+fimPrincipal
