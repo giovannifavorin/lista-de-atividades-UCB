@@ -1,0 +1,187 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+#include <ctype.h>
+#include <math.h>
+#include <stdbool.h>
+
+void CalculoValor ();
+
+void green () {
+  printf("\033[0;32m");
+}
+
+void red () {
+  printf("\033[1;31m");
+}
+
+void blue () {
+  printf("\033[0;34m");
+}
+
+void reset () {
+  printf("\033[0m");
+}
+
+void CalculoValor();
+
+int main () {
+
+  setlocale(LC_ALL, "Portuguese"); 
+
+  int Contador = 0;
+  int Contador2 = 0;
+  int Idade[100];
+  int QuantidadePessoas;
+  int QuantidadeAssentos;
+  int MaisVelho;
+  int MaisNovo;
+  int MenuOpcaoPrincipal;
+
+	char Nome[100][100];
+  char status = 'D';
+  char Destino[100];
+
+  bool Reserva = false;
+
+  float ValorInicial = 0.0;
+  float ValorFinal;
+
+  printf ("\n********************************PERGUNTAS SOBRE A VIAGEM**************************************\n");
+
+  do{
+    printf ("\nQUAL SERA O DESTINO DA VIAGEM? \n");
+    fgets( Destino, 100, stdin);
+    fflush(stdin);
+
+    Destino[strlen(Destino) - 1] = '\0';
+
+    if (strlen(Destino) == 0)
+      printf("\nLUGAR INDISPONÍVEL.\n\n");
+	} while(strlen(Destino) == 0);
+
+  do{
+    printf("\nQUAL SERA O VALOR INTEGRAL DO INGRESSO PARA %s ", Destino);
+    scanf("%f", &ValorInicial);
+    fflush(stdin);
+
+    if (ValorInicial < 1)
+      printf("\nVALOR INDISPONÍVEL.\n\n");
+	} while(ValorInicial < 1);
+
+  do{
+    printf("\nSERÃO QUANTOS ASSENTOS NESTE VOO? MÍNIMO DE 90, MÁXIMO DE 200 \n");
+    scanf("%d", &QuantidadeAssentos);
+    fflush(stdin);
+
+    if (QuantidadeAssentos > 200 || QuantidadeAssentos < 90)
+      printf("\nQUANTIDADE INVÁLIDA DE PESSOAS.\n\n");
+
+  } while (QuantidadeAssentos > 200 || QuantidadeAssentos < 90);
+
+  
+
+  printf ("\n********************************PERGUNTAS SOBRE A VIAGEM**************************************\n");
+
+    getchar();
+    printf("\33[H\33[2J"); 
+
+  printf ("\n********************************PERGUNTAS PARA O CLIENTE**************************************\n");
+
+  do{
+    printf("QUANTAS PESSOAS DESEJAM VIAJAR? \n");
+    scanf("%d", &QuantidadePessoas);
+    fflush(stdin);
+
+    if (QuantidadePessoas < 1 || QuantidadePessoas > 200)
+      printf("QUANTIDADE INSUFICIENTE DE PESSOAS");
+
+  } while (QuantidadePessoas < 1 || QuantidadePessoas > 200);
+
+  for (Contador = 0; Contador != QuantidadePessoas; Contador++){
+    printf ("\nQUAL A IDADE DA %d* PESSOA?", Contador + 1);
+    scanf ("%d", &Idade[ Contador ]);
+    fflush(stdin);
+
+    if(Idade <= 5) 
+      ValorFinal = 0.5 * ValorInicial;
+    else
+      ValorFinal = ValorInicial;
+
+    if(MaisVelho < Idade[Contador])
+		MaisVelho = Idade[Contador];
+	if(MaisNovo > Idade[Contador])
+		MaisNovo = Idade[Contador];
+  }
+
+  getchar();
+  for (Contador2 = 0; Contador2 != QuantidadePessoas; Contador2++){
+    printf ("\nQUAL O NOME DA %d* PESSOA?", Contador2 + 1);
+    fgets(Nome[ Contador2 ], 100, stdin);
+    fflush(stdin);
+  }
+
+
+
+  while(MenuOpcaoPrincipal != 9) {
+		printf("\33[H\33[2J"); 
+		printf("\n\n============== SEJA BEM-VINDO ==============\n\n");
+		printf("» Voo com destino para %s, com %d assentos e com passagem no valor máximo de R$ %.2f.\n", Destino, TotalAssentos, ValorPassagem);
+		printf("» O que você deseja fazer? \n\n");
+		printf("[1] » Verifique a ocupação do Destino (Mapa do avião)\n");
+		printf("[2] » Efetuar uma reserva\n");
+		printf("[3] » Confirmar uma reserva\n");
+		printf("[4] » Cancelar uma reserva\n");
+		printf("[5] » Relatório do Avião\n");
+		printf("[9] » Finalizar o Software");
+		printf("\n\n============== SEJA BEM-VINDO ==============\n\n");
+		printf("» O que você deseja fazer? ");
+		scanf("%d", &MenuOpcaoPrincipal);
+		switch(MenuOpcaoPrincipal) {
+			case 1:
+
+				exibirMapaAviao();
+				break;
+			case 2:
+
+	      for(Contador = 0; Contador < QuantidadePessoas; Contador++) 
+          printf("%s DESEJA RESERVAR A VIAGEM PARA %s ? 'S' PARA SIM, CASO CONTRÁRIO, DIGITE QUALQUER TECLA", Nome, Destino);
+          
+          printf("\n\n============== RESERVADO ==============\n\n");
+          printf("» IDENTIFICÇÃO DA PESSOA: %s\n", Nome[Contador]);
+          printf("» IDADE DO PASSAGEIRO: %d anos\n", Idade[Contador];)
+          if(Reservas[i].idadePassageiro <= 5) {
+            printf("» Valor da Passagem: %.2f (50%% OFF)", Reservas[i].valorPassagem);
+          }else{
+            printf("» Valor da Passagem: %.2f", Reservas[i].valorPassagem);
+          }
+          printf("\n\n============== RESERVADO ==============\n\n");
+          Reserva = true;
+          break;
+		    }
+				break;
+			case 3:
+
+				confirmarReserva();
+				break;
+			case 4:
+
+				cancelarReserva();
+				break;
+			case 5:
+
+				exibirRelatorio();
+				break;
+			default:
+				printf("\n\n============== VOLTE SEMPRE ==============\n\n");
+				printf("\t» Que pena! Você já vai...");
+				printf("\n\n============== VOLTE SEMPRE ==============\n\n");
+				menuOpcaoPrincipal = 9;
+		}
+	}
+
+    
+    
+        return 0;
+}
