@@ -1,0 +1,192 @@
+// Nome: Giovanni Favorin de Melo Matrícula: UC21106179
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+#include <ctype.h>
+#include <math.h>
+#include <stdbool.h>
+
+int main(){
+
+    setlocale(LC_ALL, "Portuguese"); 
+
+    char Nome[1000][300];
+    char Sexo[300];
+
+    int Idade[300];//>12
+
+    int Quantidadeentrevistas;//>50 && <300
+
+    int Votos[300];
+    int Voto1 = 0;
+    int Voto2 = 0;
+    int Voto3 = 0;
+    int Voto4 = 0;
+    int Voto5 = 0;
+
+    int Contador = 0;
+    int VetorNome = 0;
+    int VetorVoto = 0;
+    int VetorSexo = 0;
+    int VetorIdade = 0; 
+
+    int QuantidadeHomens;
+    int QuantidadeMulheres;
+
+    int MaisVelho;
+    int MaisNovo = 1000000;
+    int MaisVotada;
+
+    int VotouMartaVieira;
+    
+
+
+    printf("\nQUANDO DESEJAR TERMINAR, DIGITE '#' QUANDO FOR PERGUNTADO SEU NOME\n");
+    do
+    {
+        printf("QUAL O SEU NOME?\n");
+        fgets(Nome[ VetorNome ], 1000, stdin);
+        fflush(stdin);
+
+        printf("QUAL A SUA IDADE?\n");
+        scanf("%d", &Idade[ VetorIdade ]);
+        fflush(stdin);
+
+        if(Idade[ VetorIdade ] < 12)
+        {
+            printf("\nIDADE INVÁLIDA, IDADE MÍNIMA DE 12\n");
+            continue;
+        }
+        
+        printf("QUAL O SEU SEXO?\nDIGITE: \n'M' PARA MASCULINO\n'F' PARA FEMININO\n");
+        scanf("%c", &Sexo[ VetorSexo ]);
+
+        switch (toupper(Sexo[ VetorSexo ])) {
+                case 'M':
+                    QuantidadeHomens++;
+                    break;
+                case 'F':
+                    QuantidadeMulheres++;
+                    break;
+                default:
+                    printf("\nCOLOQUE 'F' OU 'M'\n");
+                    continue;
+                    break;
+            }
+
+        printf("\33[H\33[2J"); 
+		printf("\n\n============== SEJA BEM-VINDO ==============\n\n");
+		printf("» EM QUEM DESEJA VOTAR?\n\n");
+        printf("\033[0;34m");
+		printf("[1] » Sam Kerr - Austrália\n");
+		printf("[2] » Alex Morgan - Estados Unidos\n");
+		printf("[3] » Dzsenifer Marozsan - Alemanha\n");
+		printf("[4] » Amandine Henry - França\n");
+		printf("[5] » Marta Vieira - Brasil\n");
+        printf("\033[0m");
+		scanf("%d", &Votos[ VetorVoto ]);
+
+        switch(Votos[ VetorVoto ]) {
+            case 1:
+            printf("SUA VOTAÇÃO FOI ARQUIVADA PARA\n");
+            printf("\033[0;32m");
+            printf("Sam Kerr - Austrália");
+            printf("\033[0m");
+            Voto1++;
+            break;
+
+            case 2:
+            printf("SUA VOTAÇÃO FOI ARQUIVADA PARA\n");
+            printf("\033[0;32m");
+            printf("Alex Morgan - Estados Unidos");
+            printf("\033[0m");
+            Voto2++;
+            break;
+
+            case 3:
+            printf("SUA VOTAÇÃO FOI ARQUIVADA PARA\n");
+            printf("\033[0;32m");
+            printf("Dzsenifer Marozsan - Alemanha");
+            printf("\033[0m");
+            Voto3++;
+            break;
+
+            case 4:
+            printf("SUA VOTAÇÃO FOI ARQUIVADA PARA\n");
+            printf("\033[0;32m");
+            printf("Amandine Henry - França");
+            printf("\033[0m");
+            Voto4++;
+            break;
+
+            case 5:
+            printf("SUA VOTAÇÃO FOI ARQUIVADA PARA\n");
+            printf("\033[0;32m");
+            printf("Marta Vieira - Brasil");
+            printf("\033[0m");
+            Voto5++;
+            break;
+
+            default:
+            printf("Voto irreconhecido, por favor, tente\n1 ,2 ,3 ,4 ou 5");
+            continue;
+            break;
+
+        }
+
+        if(MaisNovo > Idade[VetorIdade])
+			MaisNovo = Idade[VetorIdade];
+
+		if(MaisVelho < Idade[VetorIdade])
+			MaisVelho = Idade[VetorIdade];
+
+        if(MaisVotada < Votos[ VetorVoto ])
+			MaisVotada = Votos[ VetorVoto ];
+
+        VetorNome++;
+        VetorVoto++;
+        VetorSexo++;
+        VetorIdade++; 
+
+    } while ((Quantidadeentrevistas > 50 && Quantidadeentrevistas < 300) || (Quantidadeentrevistas > 50 && Quantidadeentrevistas < 300) && VetorNome != '#');
+
+    printf ("\n********************************INFORMAÇÕES**************************************\n");
+
+    printf("A QUANTIDADE DE VOTOS PARA:\n Sam Kerr - Austrália:%d \n Alex Morgan - Estados Unidos:%d \n Dzsenifer Marozsan - Alemanha:%d \n Amandine Henry - França:%d \n Marta Vieira - Brasil:%d \n", Voto1, Voto2, Voto3, Voto4, Voto5);
+
+    printf("\nO MAIS VELHO POSSUI %d\nO MAIS NOVO POSSUI %d", MaisVelho, MaisNovo);
+
+    printf("\nA QUANTIDADE DE\nHOMENS É: %d \nMULHERES É: %d ", QuantidadeHomens, QuantidadeMulheres);
+
+    for ( Contador = 0; Contador != ; i++)
+    {
+        /* code */
+    }
+    
+
+    printf("\nA MAIS VOTADA FOI %d", Votos[ VetorVoto ]);
+
+    if  (Idade[ VetorIdade ] > 18 && toupper(Sexo[ VetorSexo ]) == 'M')
+        printf("\nO %sPOSSUI %d ANOS, SENDO ASSIM, MAIOR DE IDADE\nSE CADASTROU COMO HOMEM \nVOTOU EM %d \n", Nome[ VetorNome ], Idade[ VetorIdade ], Votos[ VetorVoto ]);
+    
+    if (Idade[ VetorIdade ] < 18 && toupper(Sexo[ VetorSexo ]) == 'F')
+        printf("\nA %sPOSSUI %d ANOS, SENDO ASSIM, MAIOR DE IDADE\nSE CADASTROU COMO MULHER \nVOTOU EM %d \n", Nome[ VetorNome ], Idade[ VetorIdade ], Votos[ VetorVoto ]);
+        
+    if (Idade[ VetorIdade ] < 18 && toupper(Sexo[ VetorSexo ]) == 'M')
+        printf("\nO %sPOSSUI %d ANOS, SENDO ASSIM, MENOR DE IDADE\nSE CADASTROU COMO HOMEM \nVOTOU EM %d \n", Nome[ VetorNome ], Idade[ VetorIdade ], Votos[ VetorVoto ]);
+
+    if (Idade[ VetorIdade ] < 18 && toupper(Sexo[ VetorSexo ]) == 'F')
+        printf("A %sPOSSUI %d ANOS, SENDO ASSIM, MENOR DE IDADE\nSE CADASTROU COMO MULHEr \nVOTOU EM %d \n", Nome[ VetorNome ], Idade[ VetorIdade ], Votos[ VetorVoto ]);
+
+    if (Idade[ VetorIdade ] > 18 && Votos[ VetorVoto ] == 5)
+        printf("\nO/A %sPOSSUI %d ANOS, SENDO ASSIM, AMIOR DE IDADE\nSE CADASTROU COMO %c \nVOTOU EM MARTA VIEIRA\n", Nome[ VetorNome ], Idade[ VetorIdade ], Sexo[ VetorSexo ]);
+
+    if (Idade[ VetorIdade ] > 18 && Votos[ VetorVoto ] == 5)
+    printf("\nO/A %sPOSSUI %d ANOS, SENDO ASSIM, AMIOR DE IDADE\nSE CADASTROU COMO %c \nVOTOU EM MARTA VIEIRA\n", Nome[ VetorNome ], Idade[ VetorIdade ], Sexo[ VetorSexo ]);
+
+    printf ("\n********************************INFORMAÇÕES**************************************\n");
+
+    return 0;
+}
